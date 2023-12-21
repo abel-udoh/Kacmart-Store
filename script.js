@@ -1,3 +1,4 @@
+
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -104,7 +105,7 @@ function updateCartTotal() {
 
 //slidehow functionality//
 let slideIndex = 0;
-showSlides();
+  showSlides();
 
 function showSlides() {
   let i;
@@ -114,7 +115,7 @@ function showSlides() {
     slides[i].style.display = "none";  
   }
   
-  slideIndex++;
+  slideIndex ++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
@@ -123,7 +124,6 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
-
 
 /*for mobile navbar responsiveness*/
 const bar = document.getElementById('bar');

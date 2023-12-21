@@ -1,5 +1,4 @@
 import mysql from "mysql2";
-import 
 require('dotenv').config();
 
 let connection = mysql.createConnection( opts, {
