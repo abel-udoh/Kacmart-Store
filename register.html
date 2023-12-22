@@ -30,13 +30,34 @@
         </div>
     </section>
 
-    <section id="sign_up">
-        <div class="sign_up-form">
+    <section id="register">
+        <div class="register_form">
             <img src="images/user_icon2.png" alt="">
             <h1>Sign Up Now!</h1>
-            <form action="">
-                <input type="text" class="input-box" placeholder="First Name">
-                <input type="text" class="input-box" placeholder="Last Name">
+            <!--<div>
+                <% if(errors !== " ") {%>
+                    <% errors.forEach(functon(item) { %> 
+                        <div class="alert alert-danger">
+                            <%- item %>
+                        </div> 
+                    <% })%>
+                <%}%>
+            </div>
+        -->
+            <div>
+                <!-- Check if errors array is not empty -->
+                <% if (errors.length > 0) { %>
+                <!-- Iterate over each error and display an alert box -->
+                <% errors.forEach(function(item) { %>
+                    <div class="alert alert-danger">
+                    <!-- Output the error message, escaping HTML characters 
+                    <%= item %>
+                    </div>
+                <% }) %>
+                <% } %>
+            </div> -->
+            <form method="POST" action="/register">
+                <input type="text" class="input-box" placeholder="Full Name">
                 <input type="email" class="input-box" placeholder="Your Email">
                 <input type="password" class="input-box" placeholder="Your Password">
                 <input type="password" class="input-box" placeholder="Confirm Password">

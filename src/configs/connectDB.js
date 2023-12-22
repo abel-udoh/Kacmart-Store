@@ -1,4 +1,5 @@
-import mysql from "mysql2";
+//import mysql from "mysql2";
+const mysql = require('mysql2');
 require('dotenv').config();
 
 let connection = mysql.createConnection( opts, {
@@ -8,7 +9,7 @@ let connection = mysql.createConnection( opts, {
     password: process.env.DB_PASSWORD,
 });
 
-connection.connect( cb, function(err) {
+connection.connect(cb, function(err) {
     if (err) throw err;
     console.log("Database Connected!");
 });

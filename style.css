@@ -1289,7 +1289,7 @@ nav ul li {
 }
 
 /*Sign Up*/
-#sign_up
+#register
 {
   margin: 0;
   padding: 0;
@@ -1301,7 +1301,7 @@ nav ul li {
   width: 100%;
   }
 
-#sign_up .sign_up-form {
+#register .register_form {
   width: 300px;
   box-shadow: 0 0 3px 0 rgba(0,0,0,3);
   background: #fff;
@@ -1309,13 +1309,13 @@ nav ul li {
   margin: 8% auto 0;
   text-align: center;
 }
-#sign_up .sign_up-form h1{
+#register .register_form h1{
   font-size: 30px;
   margin-bottom: 20px;
   color: #1c8adb;
 
 }
-#sign_up .sign_up-form .input-box {
+#register .register_form .input-box {
   border-radius: 20px;
   padding: 10px;
   margin: 10px 0;
@@ -1324,7 +1324,7 @@ nav ul li {
   outline: none;
 
 }
-#sign_up .sign_up-form button {
+#register .register_form button {
   color: #fff;
   width: 100%;
   padding: 10px;
@@ -1335,37 +1335,37 @@ nav ul li {
   outline: none;
   cursor: pointer;
 }
-#sign_up .sign_up-form .sign_up-btn {
+#register .register_form .sign_up-btn {
   background-color: #1c8adb;
 
 }
-#sign_up .sign_up-form .sign_up-btn:hover{
+#sign_up .register_form .sign_up-btn:hover{
   background-color: purple;
 }
-#sign_up .sign_up-form .google-btn {
+#register .register_form .google-btn {
   background-color: #21afde;
 }
-#sign_up .sign_up-form .google-btn:hover {
+#register .register_form .google-btn:hover {
   background-color: purple;
 }
-#sign_up .sign_up-form a {
+#register .register_form a {
   text-decoration: none;
 }
-#sign_up .sign_up-form hr {
+#register .register_form hr {
   margin-top: 20px;
   width: 100%;
 }
-#sign_up .sign_up-form .or {
+#register .register_form .or {
   background: #fff;
   width: 30px;
   margin: -19px auto 10px;
 
 }
-#sign_up .sign_up-form img {
+#register .register_form img {
   width: 70px;
   margin-top: -50px;
 }
-#sign_up .sign_up-form a:hover{
+#register .register_form a:hover{
   color: purple;
   transition: 0.3;
 }
