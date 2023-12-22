@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ejs/3.1.6/ejs.min.js"></script>
+
 </head>
 
 <body>
@@ -20,7 +22,6 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a class="active" href="login.html"><em>Sign In</em></a></li>
                 <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
             </ul>
         </div>
@@ -34,16 +35,20 @@
         <div class="register_form">
             <img src="images/user_icon2.png" alt="">
             <h1>Sign Up Now!</h1>
-            <!--<div>
-                <% if(errors !== " ") {%>
-                    <% errors.forEach(functon(item) { %> 
-                        <div class="alert alert-danger">
-                            <%- item %>
-                        </div> 
-                    <% })%>
-                <%}%>
+           
+
+    <div id="errorContainer"></div>
+    <script id="errorTemplate" type="text/template">
+        <div>
+        <% if (errors && errors.length > 0) { %>
+            <% errors.forEach(function(item) { %>
+            <div class="alert alert-danger">
+                <%= item %>
             </div>
-        -->
+            <% }) %>
+        <% } %>
+        </div>
+    </script>
 
             <form method="POST" action="/register">
                 <input type="text" class="input-box" placeholder="Full Name">
@@ -62,6 +67,23 @@
         </div>
     </section>
     
+
+    <script>
+        // Assuming 'errors' is a JavaScript array defined elsewhere in your code
+        let errors = /* Populate this array with your errors */;
+    
+        let errorContainer = document.getElementById('errorContainer');
+        let errorTemplate = document.getElementById('errorTemplate').innerHTML;
+    
+        // Use EJS to render the template
+        let renderedTemplate = ejs.render(errorTemplate, { errors: errors });
+        
+        // Append the rendered template to the container
+        errorContainer.innerHTML = renderedTemplate;
+      </script>
+
+
     <script src="script.js"></script>
+
 </body>
 </html>

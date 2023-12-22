@@ -1,7 +1,9 @@
 import { validationResult } from "express-validator";
 
 let getRegisterPage = (req, res) => {
-    return res.render(register.html)
+    return res.render("register.html", {
+        errors: req.flash("errors")
+    })
 }; 
 
 let createNewUser = (req, res) => {
