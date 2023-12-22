@@ -1,4 +1,5 @@
-import { check } from "express-validator";
+//import { check } from "express-validator";
+const {check} = require('express-validator');
 /** 
 let validateRegister = [
     check( fields, "email", message: "Invalid email").isEmail().trim(),

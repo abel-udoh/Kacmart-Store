@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-import auth from "../validation/authValidation";
+const auth = require('../validation/authValidation');
 let initWebRoutes = (app) => {
     router.get("/", (req, res)=>{ 
         return res.render("index.html")
