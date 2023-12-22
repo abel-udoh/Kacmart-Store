@@ -44,18 +44,7 @@
                 <%}%>
             </div>
         -->
-            <div>
-                <!-- Check if errors array is not empty -->
-                <% if (errors.length > 0) { %>
-                <!-- Iterate over each error and display an alert box -->
-                <% errors.forEach(function(item) { %>
-                    <div class="alert alert-danger">
-                    <!-- Output the error message, escaping HTML characters 
-                    <%= item %>
-                    </div>
-                <% }) %>
-                <% } %>
-            </div> -->
+
             <form method="POST" action="/register">
                 <input type="text" class="input-box" placeholder="Full Name">
                 <input type="email" class="input-box" placeholder="Your Email">
