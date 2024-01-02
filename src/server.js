@@ -41,5 +41,5 @@ app.use(passport.session());
 //init all web route
 initWebRoutes(app);
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3306;
 app.listen(port, () => console.log(`Kacmart Eccomerce store is running on port ${port}!`));

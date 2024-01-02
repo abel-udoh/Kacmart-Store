@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ejs/3.1.6/ejs.min.js"></script>
+    
 
 </head>
 
@@ -38,7 +39,8 @@
            
 
     <div id="errorContainer"></div>
-    <script id="errorTemplate" type="text/template">
+    <script id="errorTemplate" type="text/html">
+
         <div>
         <% if (errors && errors.length > 0) { %>
             <% errors.forEach(function(item) { %>
@@ -69,6 +71,7 @@
     
 
     <script>
+
         // Assuming 'errors' is a JavaScript array defined elsewhere in your code
         let errors = /* Populate this array with your errors */;
     
