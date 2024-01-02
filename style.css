@@ -1370,9 +1370,9 @@ nav ul li {
   transition: 0.3;
 }
 
-/*Sign In*/
+/*login*/
 
-#sign_in
+#login
 {
   margin: 0;
   padding: 0;
@@ -1384,7 +1384,7 @@ nav ul li {
   width: 100%;
   height: 100%;
 }
-#sign_in .sign_in-form {
+#login .login-form {
   width: 300px;
   /*box-shadow: 0 0 3px 0 rgba(0,0,0,3);*/
   background: #fff;
@@ -1392,13 +1392,16 @@ nav ul li {
   margin: 8% auto 0;
   text-align: center;
 }
-#sign_in .sign_in-form h1{
+#login .login-form h1{
   font-size: 30px;
   margin-bottom: 20px;
   color: #1c8adb;
-
 }
-#sign_in .sign_in-form .input-box {
+#login .login-form p {
+color: #000;
+}
+
+#login .login-form .input-box {
   border-radius: 20px;
   padding: 10px;
   margin: 10px 0;
@@ -1407,7 +1410,7 @@ nav ul li {
   outline: none;
 
 }
-#sign_in .sign_in-form button {
+#login .login-form button {
   color: #fff;
   width: 100%;
   padding: 10px;
@@ -1418,20 +1421,20 @@ nav ul li {
   outline: none;
   cursor: pointer;
 }
-#sign_in .sign_in-form .sign_in-btn {
+#login .login-form .login-form-btn {
   background-color: #1c8adb;
 }
-#sign_in .sign_in-form .sign_in-btn:hover{
+#login .login-form .login-form-btn:hover{
   background-color: purple;
 }
-#sign_in .sign_in-form a {
+#login .login-form a {
   text-decoration: none;
 }
-#sign_in .sign_in-form img {
+#login .login-form img {
   width: 70px;
   margin-top: -50px;
 }
-#sign_in .sign_in-form a:hover{
+#login .login-form a:hover{
   color: purple;
   transition: 0.3;
 }

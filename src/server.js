@@ -6,7 +6,8 @@ const configViewEngine = require('./configs/viewEngine');
 const initWebRoutes = require('./routes/web');
 const cookieParser = require('cookie-parser');
 const connectFlash = require('connect-flash');
-const session = require('express-session')
+const session = require('express-session');
+const passport = require('passport');
 
 let app = express();
 
@@ -14,26 +15,31 @@ let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }));
 
+//use cookie parser
+app.use(cookieParser('secret'));
+
+
 //config session
-app.use(session( options: {
+app.use(session({
     secret: 'secret',
-    resave: true;
-    saveUninitialized: false,
-    cookie: {
-        maxAge: 1000 * 60 * 60 *24 //86400000 1 day
-    }
+    resave: true,
+    saveUninitialized: true
 }));
 
-
+ 
 //Enable flash message
 app.use(connectFlash());
 
 
-//Config View Engine
+//Config View Engine 
 configViewEngine(app);
+
+//config passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 //init all web route
 initWebRoutes(app);
 
-let port = process.env.PORT || 3306;
-app.listen(port, () => console.log(`Kacmart Eccomerce store is running on port ${PORT}!`));
+let port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Kacmart Eccomerce store is running on port ${port}!`));

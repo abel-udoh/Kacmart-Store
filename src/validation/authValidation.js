@@ -16,8 +16,8 @@ module.exports = {
 import { check } from "express-validator";
 **/
 let validateRegister = [
-  check("email", "Invalid email").isEmail().trim(),
-  check("password", "Invalid password. Password must be at least two characters long").isLength({ min: 2 }),
+  check("Email", "Invalid email").isEmail().trim(),
+  check("Password", "Invalid password. Password must be at least two characters long").isLength({ min: 2 }),
   check("ConfirmationPassword", "Password Confirmation does not match").custom((value, { req }) => {
     return value === req.body.password;
   }),
