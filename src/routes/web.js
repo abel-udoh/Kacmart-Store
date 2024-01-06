@@ -86,9 +86,9 @@ let initWebRoutes = (app) => {
     router.get("/register", registerController.getRegisterPage);
     
     // Validate registration before creating a new user
-    router.post("/register", auth.validateRegister, registerController.createNewUser);
+    //router.post("/register", auth.validateRegister, registerController.createNewUser);
 
-    router.post("/logout", loginController.postLogOut);
+    //router.post("/logout", loginController.postLogOut);
 
     // Remove the return statement and directly use app.use to mount the router
     app.use("/dashboard.ejs", router);
